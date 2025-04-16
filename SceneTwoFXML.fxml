@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneTwoFXML">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0">
+         <image>
+            <Image url="@rosie-sun-1L71sPT5XKc-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="34.0" layoutY="423.0" opacity="0.7" prefHeight="144.0" prefWidth="736.0" text="You come upon a fork in the road. Do you go left or go right?">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="sceneTwoLeft" layoutX="544.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleSceneTwoLeft" text="Go Left">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="sceneTwoRight" layoutX="653.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleSceneTwoRight" text="Go Right">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="455.0" layoutY="378.0" text="Choose: " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
