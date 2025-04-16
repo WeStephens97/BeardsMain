@@ -13,6 +13,7 @@ public class TheForest extends Application
       Scene scene = new Scene(root);
       stage.setScene(scene);
       stage.setTitle("The Forest");
+      stage.setResizable(false);
       stage.show();
    }
 }
