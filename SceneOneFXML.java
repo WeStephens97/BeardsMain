@@ -14,12 +14,6 @@ import java.sql.SQLException;
 public class SceneOneFXML extends Map
 {
     Map map = new Map();
-
-    @FXML
-    private Button putOption;
-
-    @FXML
-    private Button straightOption;
     
     @FXML
     private TextField textField;
@@ -27,29 +21,6 @@ public class SceneOneFXML extends Map
     @FXML
     private TextArea textArea;
 
-    @FXML
-    void handlePutOption(ActionEvent event) throws IOException
-    {
-       FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("YouLostFXML.fxml"));
-        Parent parent = loader.load();
-        Scene scene = new Scene(parent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-    }
-
-    @FXML
-    void handleStraightOption(ActionEvent event) throws IOException
-    {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("SceneTwoFXML.fxml"));
-        Parent parent = loader.load();
-        Scene scene = new Scene(parent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
-    }
     @FXML
     void queryDatabase(ActionEvent event) throws IOException
     {
