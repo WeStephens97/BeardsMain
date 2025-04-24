@@ -5,7 +5,7 @@
 200,0,You arrive at a fork in the road. Do you go left or right?
 200,1,This is a dead end. Turn back.
 300,0,You come to a divide in the path. Do you go left or right?
-400,0,Win
 300,1,You see a cave. Do you go straight or go back?
+400,0,Win
 400,1,You see a faint light in the distance. Go straight or go back?
 500,0,Lose
