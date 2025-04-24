@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -16,26 +14,11 @@
             <Image url="@rosie-sun-1L71sPT5XKc-unsplash.jpg" />
          </image>
       </ImageView>
-      <TextArea fx:id="textArea" editable="false" layoutX="34.0" layoutY="423.0" opacity="0.7" prefHeight="144.0" prefWidth="736.0" text="You are in a forest. Ahead you see an opening to your left right and straight. Which direction do you go?">
+      <TextArea fx:id="textArea" editable="false" layoutX="32.0" layoutY="403.0" opacity="0.7" prefHeight="144.0" prefWidth="736.0" text="You are in a forest. Ahead you see an opening to your left right and straight. Which direction do you go?" wrapText="true">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
       </TextArea>
-      <Button fx:id="straightOption" layoutX="474.0" layoutY="373.0" mnemonicParsing="false" onAction="#handleStraightOption" text="Keep going straight">
-         <font>
-            <Font name="Arial Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button fx:id="putOption" layoutX="675.0" layoutY="373.0" mnemonicParsing="false" onAction="#handlePutOption" text="Stay put">
-         <font>
-            <Font name="Arial Bold" size="15.0" />
-         </font>
-      </Button>
-      <Label layoutX="409.0" layoutY="378.0" text="Choose: " textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="textField" layoutX="63.0" layoutY="383.0" onAction="#queryDatabase" />
+      <TextField fx:id="textField" layoutX="32.0" layoutY="559.0" onAction="#queryDatabase" prefHeight="26.0" prefWidth="736.0" />
    </children>
 </AnchorPane>
