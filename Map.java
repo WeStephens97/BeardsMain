@@ -100,7 +100,7 @@ public class Map
          {
             level = 1;
             System.out.println("straight");
-            return 0;  
+            return 0;
          }
          if(word.equals("back"))
          {
