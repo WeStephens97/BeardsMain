@@ -43,7 +43,7 @@ public class SceneOneController extends Map
             }
             if(place.equals("Lose"))
             {
-            //Is supposed to show a losing screen but crashes
+            //Occurs in a loss
                FXMLLoader loader = new FXMLLoader();
                loader.setLocation(getClass().getResource("YouLostFXML.fxml"));
                Parent parent = loader.load();
