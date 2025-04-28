@@ -1,11 +1,11 @@
 1,0,Lose
 100,0,You are in a forest. Ahead you see an opening to your left right and straight. Which direction do you go?
-100,1,You arrive at a ravine. You must go back the way you came.
+100,1,Lose
 100,2,You arrive at a boulder blocking the path. There is no way forward. You must go back.
 200,0,You arrive at a fork in the road. Do you go left or right?
 200,1,This is a dead end. Turn back.
 300,0,You come to a divide in the path. Do you go left or right?
-300,1,You see a cave. Do you go straight or go back?
 400,0,Win
+300,1,You see a cave. Do you go straight or go back?
 400,1,You see a faint light in the distance. Go straight or go back?
 500,0,Lose
