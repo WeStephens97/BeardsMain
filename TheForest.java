@@ -7,7 +7,6 @@ import java.io.IOException;
 
 public class TheForest extends Application
 {
-   Map map = new Map();
    public void start(Stage stage) throws IOException
    {
       AnchorPane root = FXMLLoader.load(getClass().getResource("MainMenuFXML.fxml"));
