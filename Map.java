@@ -11,7 +11,6 @@ public class Map
 {
    protected int level;
    protected int location;
-   protected int lost = 0;
    
    public Map()
    {
@@ -35,7 +34,6 @@ public class Map
    }
    public void setLocation(int location)
    {
-      lost++;
       this.location = location;
    }
    public int convertWords(String word)
