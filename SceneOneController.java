@@ -11,7 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import java.sql.SQLException;
 
-public class SceneOneController extends Map
+public class SceneOneController
 {
     Map map = new Map();
     
