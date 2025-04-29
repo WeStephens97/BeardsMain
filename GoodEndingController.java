@@ -9,7 +9,7 @@ import java.io.IOException;
 
 import javafx.scene.control.Button;
 
-public class GoodEndingFXML {
+public class GoodEndingController {
 
     @FXML
     private Button exitButton;

@@ -10,8 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="YouLostFXML">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="YouLostController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0">
          <image>
@@ -32,14 +31,14 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="1.0" green="0.28518518805503845" blue="0.28518518805503845" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="144.0" layoutY="225.0" text="YOUR STUCK FURTHER INTO THE FOREST, BETTER LUCK NEXT TIME">
+      <Label layoutX="200.0" layoutY="231.0" text="YOU ARE BEYOND SAVING, BETTER LUCK NEXT TIME">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -53,7 +52,7 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
+                        <Color red="0.9263157844543457" green="0.7067446112632751" blue="0.7067446112632751" />
                      </color>
                   </Stop>
                </stops>

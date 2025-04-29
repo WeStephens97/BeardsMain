@@ -6,22 +6,30 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-
 import javafx.scene.control.Button;
 
-public class SceneOneFXML {
+public class YouLostController {
 
     @FXML
-    private Button putOption;
+    private Button exitButton;
 
     @FXML
-    private Button straightOption;
+    private Button mainmenuButton;
 
     @FXML
-    void handlePutOption(ActionEvent event) throws IOException
+    private Button restartButton;
+
+    @FXML
+    void handleExitButton(ActionEvent event) 
     {
-       FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("YouLostFXML.fxml"));
+         System.exit(0);
+    }
+
+    @FXML
+    void handleMainMenuButton(ActionEvent event) throws IOException
+    {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("MainMenuFXML.fxml"));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -30,10 +38,10 @@ public class SceneOneFXML {
     }
 
     @FXML
-    void handleStraightOption(ActionEvent event) throws IOException
+    void handleRestartButton(ActionEvent event) throws IOException
     {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("TheGoodEndingFXML.fxml"));
+        loader.setLocation(getClass().getResource("SceneOneFXML.fxml"));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

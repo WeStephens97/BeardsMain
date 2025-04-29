@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import java.io.IOException;
 
-public class MainMenuFXML {
+public class MainMenuController {
 
     @FXML
     private Button exitButton;
