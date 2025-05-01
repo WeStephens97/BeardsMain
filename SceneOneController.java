@@ -10,10 +10,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class SceneOneController
 {
     Map map = new Map();
+    AllowedWords allowedWords = new AllowedWords();
+    ArrayList<String> directions = allowedWords.getList();
     
     @FXML
     private TextField textField;
@@ -23,40 +26,48 @@ public class SceneOneController
 
     @FXML
     void queryDatabase(ActionEvent event) throws IOException
-    {
-         try
+    { 
+      String textString = textField.getText();   
+      if(directions.contains(textString) == false)
          {
-            String textString = textField.getText();
-            String place = map.queryDatabase(map.getLevel(), textString);
-            textArea.setText(place);
-            textField.setText("");
-            if(place.equals("Win"))
-            {
-            //Occurs in a win
-               FXMLLoader loader = new FXMLLoader();
-               loader.setLocation(getClass().getResource("TheGoodEndingFXML.fxml"));
-               Parent parent = loader.load();
-               Scene scene = new Scene(parent);
-               Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-               window.setScene(scene);
-               window.show();
-            }
-            if(place.equals("Lose"))
-            {
-            //Occurs in a loss
-               FXMLLoader loader = new FXMLLoader();
-               loader.setLocation(getClass().getResource("YouLostFXML.fxml"));
-               Parent parent = loader.load();
-               Scene scene = new Scene(parent);
-               Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-               window.setScene(scene);
-               window.show();
-            }
-
+            textArea.setText(String.format(textArea.getText() + "\nYou entered %s, please try again.", textField.getText()));
          }
-         catch(SQLException e)
+      else
          {
-            System.out.printf("SQL ERROR: %s%n", e.getMessage());
+            try
+            {
+               //String textString = textField.getText();
+               String place = map.queryDatabase(map.getLevel(), textString);
+               textArea.setText(place);
+               textField.setText("");
+               if(place.equals("Win"))
+               {
+               //Occurs in a win
+                  FXMLLoader loader = new FXMLLoader();
+                  loader.setLocation(getClass().getResource("TheGoodEndingFXML.fxml"));
+                  Parent parent = loader.load();
+                  Scene scene = new Scene(parent);
+                  Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                  window.setScene(scene);
+                  window.show();
+               }
+               if(place.equals("Lose"))
+               {
+               //Occurs in a loss
+                  FXMLLoader loader = new FXMLLoader();
+                  loader.setLocation(getClass().getResource("YouLostFXML.fxml"));
+                  Parent parent = loader.load();
+                  Scene scene = new Scene(parent);
+                  Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                  window.setScene(scene);
+                  window.show();
+               }
+   
+            }
+            catch(SQLException e)
+            {
+               System.out.printf("SQL ERROR: %s%n", e.getMessage());
+            }
          }
     }
 
