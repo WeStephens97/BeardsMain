@@ -25,10 +25,10 @@ public class SceneOneController
     private TextArea textArea;
 
     @FXML
-    void queryDatabase(ActionEvent event) throws IOException
-    { 
+    void queryDatabase(ActionEvent event) throws IOException //Checks database for the entered word
+    {  
       String textString = textField.getText();   
-      if(directions.contains(textString) == false)
+      if(directions.contains(textString) == false) //Verifies if the word is a valid direction to go
          {
             textArea.setText(String.format(textArea.getText() + "\nYou entered %s, please try again.", textField.getText()));
          }
@@ -36,7 +36,6 @@ public class SceneOneController
          {
             try
             {
-               //String textString = textField.getText();
                String place = map.queryDatabase(map.getLevel(), textString);
                textArea.setText(place);
                textField.setText("");
