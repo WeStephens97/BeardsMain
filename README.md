@@ -4,6 +4,7 @@ The main repository for the group "Beards"
 Before playing the game make sure you have the proper paths for the SDK and fxml modules in workspace.
 After that you must download all files (except the README file and the ConvertFileToDatabase files.) 
 You must also compile all the .java files.
+Run the application from the "TheForest.java" application.
 
 To play the game you must click in the text field.
 Then type any of the following words "straight" right" left "back".
