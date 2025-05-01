@@ -114,7 +114,7 @@ public class Map
 
    
 
-   public String queryDatabase(int lev, String loc) throws SQLException
+   public String queryDatabase(int lev, String loc) throws SQLException //Connects to the map.db database to pull location data
    {  int num = convertWords(loc);
       try(Connection connection = DriverManager.getConnection("jdbc:sqlite:map.db"))
       {
